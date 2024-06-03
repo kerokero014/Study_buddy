@@ -1,7 +1,5 @@
 import Header from "../components/MainHeader";
 import Footer from "../components/MainFooter";
-import AllDecks from "../components/AllDecks";
-import TestComponent from "../components/TestComponent";
 
 export default function Courses() {
   return (
