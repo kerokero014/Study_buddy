@@ -1,7 +1,10 @@
 "use client";
 import { useEffect, useState } from "react";
+import prisma from "../../../prisma/client";
 
-export default function AllDecks() {
+export default async function AllDecks() {
+  const allDecks = await prisma.user.findMany();
+  console.log(allDecks);
 
   return (
     <div>
