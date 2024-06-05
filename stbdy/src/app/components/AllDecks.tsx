@@ -10,13 +10,9 @@ async function getDecks() {
 export default async function AllDecks() {
   const decks = await getDecks();
   return (
-    <div className="container mx-auto p-4">
+    <div className="mx-auto space-y-5 p-4 md:space-y-6 lg:space-y-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
       {decks.map((deck) => (
-        <Deck
-          key={deck.id}
-          title={deck.title}
-          description={deck.description}
-        />
+        <Deck key={deck.id} title={deck.title} description={deck.description} />
       ))}
     </div>
   );
