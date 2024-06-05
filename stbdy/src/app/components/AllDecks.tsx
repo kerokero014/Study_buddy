@@ -10,10 +10,7 @@ async function getDecks() {
 export default async function AllDecks() {
   const decks = await getDecks();
   return (
-    <div>
-      <h1 className="text-2xl font-bold text-center text-slate-900">
-        All Decks
-      </h1>
+    <div className="container mx-auto p-4">
       {decks.map((deck) => (
         <Deck
           key={deck.id}
