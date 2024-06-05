@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 
 export default function MainHeader() {
@@ -61,9 +62,11 @@ export default function MainHeader() {
             </li>
           </ul>
         </nav>
-        <button className="hidden md:block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-zinc-700 transition-colors duration-200">
-          Login
-        </button>
+        <Link href="/login">
+          <button className="hidden md:block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-zinc-700 transition-colors duration-200">
+            Login
+          </button>
+        </Link>
       </div>
     </header>
   );
