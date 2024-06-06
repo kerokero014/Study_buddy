@@ -32,7 +32,7 @@ export default function Home() {
           Study smarter and learn better.
         </p>
         <Link
-          href="/courses"
+          href="/decks"
           className="inline-block px-4 py-3 text-lg font-bold text-white bg-blue-500 rounded-lg hover:bg-slate-800 opacity-80"
         >
           Get Started

@@ -52,14 +52,6 @@ export default function MainHeader() {
                 Decks
               </a>
             </li>
-            <li>
-              <a
-                href="#"
-                className="block px-2 py-1 rounded-md hover:bg-slate-600 hover:text-gray-300 transition"
-              >
-                Cards
-              </a>
-            </li>
           </ul>
         </nav>
         <Link href="/login">
