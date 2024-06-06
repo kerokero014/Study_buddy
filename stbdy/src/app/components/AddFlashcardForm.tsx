@@ -1,4 +1,5 @@
-"use client";
+// components/AddFlashcardForm.tsx
+
 import { useState } from "react";
 
 interface AddFlashcardFormProps {
