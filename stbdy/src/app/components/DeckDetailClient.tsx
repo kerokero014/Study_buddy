@@ -17,7 +17,7 @@ interface Flashcard {
 interface Deck {
   id: number;
   title: string;
-  description: string | null; // Allow description to be null
+  description: string | null;
   flashcard: Flashcard[];
 }
 
@@ -33,7 +33,7 @@ const DeckDetailClient = ({ deck }: DeckDetailClientProps) => {
   };
 
   return (
-    <div className="container mx-auto p-8">
+    <div className="bg-slate-200 container mx-auto p-8 m-11">
       <h1 className="text-3xl font-bold mb-4">{deck.title}</h1>
       <p className="text-gray-700 mb-6">{deck.description}</p>
       <AddFlashcardForm deckId={deck.id} onFlashcardAdded={handleFlashcardAdded} />

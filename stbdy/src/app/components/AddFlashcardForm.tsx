@@ -24,16 +24,20 @@ const AddFlashcardForm = ({
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
 
+    const data = { question, answer, deckId };
+    console.log("Sending data:", data);
+
     const response = await fetch("/api/flashcards", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ question, answer, deckId }),
+      body: JSON.stringify(data),
     });
 
     if (response.ok) {
       const newFlashcard = await response.json();
+      console.log("Received new flashcard:", newFlashcard);
       onFlashcardAdded(newFlashcard);
       setQuestion("");
       setAnswer("");
