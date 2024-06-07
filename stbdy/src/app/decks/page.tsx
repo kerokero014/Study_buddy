@@ -8,8 +8,6 @@ export default function Courses() {
     <>
       <Header />
 
-      <h1 className="text-4xl text-white m-4 p-1">Courses</h1>
-
       <AllDecks />
 
       <Footer />

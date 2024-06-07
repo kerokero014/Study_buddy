@@ -1,21 +1,21 @@
-'use client';
+"use client";
 export default function LogInForm() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-      <div className="w-full max-w-md p-8 m-4 bg-white rounded shadow-md">
-        <h2 className="mb-6 text-2xl font-bold text-center text-gray-900">
+      <div className="w-full max-w-md p-8 m-4 bg-gray-600 rounded-3xl shadow-md">
+        <h2 className="mb-6 text-2xl font-bold text-center text-gray-100">
           Log In
         </h2>
         <form className="space-y-5">
           <label className="block">
-            <span className="text-gray-700">Email:</span>
+            <span className="text-gray-100">Email:</span>
             <input
               type="email"
               className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
             />
           </label>
           <label className="block">
-            <span className="text-gray-700">Password:</span>
+            <span className="text-gray-100">Password:</span>
             <input
               type="password"
               className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"

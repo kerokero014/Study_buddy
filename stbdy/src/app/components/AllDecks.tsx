@@ -46,7 +46,7 @@ export default function AllDecks() {
   }, []);
 
   return (
-    <div className="container mx-auto p-8">
+    <div className="bg-slate-300 container mx-auto p-8 m-11 rounded-2xl">
       <div className="flex justify-between items-center mb-4">
         <h1 className="text-3xl font-bold">All Decks</h1>
         <button
