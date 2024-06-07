@@ -1,3 +1,4 @@
+// components/AllDecks.tsx
 "use client";
 
 import { useEffect, useState } from "react";
@@ -22,6 +23,16 @@ async function fetchDecks() {
   return response.json();
 }
 
+async function deleteDeck(id: number) {
+  const response = await fetch(`/api/decks/${id}`, {
+    method: "DELETE",
+  });
+  if (!response.ok) {
+    throw new Error("Failed to delete deck");
+  }
+  return response.json();
+}
+
 export default function AllDecks() {
   const [decks, setDecks] = useState<DeckProps[]>([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -30,8 +41,21 @@ export default function AllDecks() {
     setDecks((prevDecks) => [...prevDecks, newDeck]);
   };
 
+  const handleDeckDeleted = (id: number) => {
+    setDecks((prevDecks) => prevDecks.filter((deck) => deck.id !== id));
+  };
+
   const handleOpenModal = () => setIsModalOpen(true);
   const handleCloseModal = () => setIsModalOpen(false);
+
+  const handleDelete = async (id: number) => {
+    try {
+      await deleteDeck(id);
+      handleDeckDeleted(id);
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   useEffect(() => {
     const loadDecks = async () => {
@@ -70,6 +94,7 @@ export default function AllDecks() {
               id={deck.id}
               title={deck.title}
               description={deck.description}
+              onDelete={handleDelete}
             />
           </Link>
         ))}

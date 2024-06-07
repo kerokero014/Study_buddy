@@ -1,3 +1,5 @@
+// decks/[id]/page.tsx
+
 import MainFooter from "@/app/components/MainFooter";
 import MainHeader from "@/app/components/MainHeader";
 import prisma from "../../../../prisma/client";
@@ -26,7 +28,7 @@ const DeckDetail = async ({ params }: DeckDetailProps) => {
   return (
     <>
       <MainHeader />
-      <DeckDetailClient deck={deck} />;
+      <DeckDetailClient deck={deck} />
       <MainFooter />
     </>
   );

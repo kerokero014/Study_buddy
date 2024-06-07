@@ -47,8 +47,8 @@ const AddFlashcardForm = ({
   };
 
   return (
-    <form onSubmit={handleSubmit} className="mb-4">
-      <div className="mb-2">
+    <form onSubmit={handleSubmit} className="space-y-4">
+      <div>
         <label htmlFor="question" className="block text-gray-700">
           Question
         </label>
@@ -61,7 +61,7 @@ const AddFlashcardForm = ({
           required
         />
       </div>
-      <div className="mb-2">
+      <div>
         <label htmlFor="answer" className="block text-gray-700">
           Answer
         </label>
