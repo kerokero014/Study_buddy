@@ -1,4 +1,6 @@
 "use client";
+import Link from "next/link";
+
 export default function LogInForm() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
@@ -27,6 +29,10 @@ export default function LogInForm() {
           >
             Log In
           </button>
+
+          <Link href="/sign-up" className="text-slate-100 hover:underline hover:text-cyan-400 mt-10">
+            Sign up.
+          </Link>
         </form>
       </div>
     </div>
