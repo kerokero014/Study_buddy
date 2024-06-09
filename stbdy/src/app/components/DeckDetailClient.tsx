@@ -83,7 +83,7 @@ const DeckDetailClient = ({ deck }: DeckDetailClientProps) => {
       <div className="grid gap-4 md:gap-6 lg:gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
         {flashcards.map((flashcard) => (
           <div
-          className="bg-white shadow-lg rounded-lg p-4 relative flip-card"
+            className="bg-white shadow-lg rounded-lg p-4 relative flip-card"
             key={flashcard.id}
             style={{ minHeight: "200px" }}
           >
@@ -95,7 +95,7 @@ const DeckDetailClient = ({ deck }: DeckDetailClientProps) => {
                 <p className="text-gray-600">{flashcard.answer}</p>
                 <button
                   onClick={() => handleDelete(flashcard.id)}
-                  className="absolute bottom-2 right-2 bg-red-500 text-white px-2 py-1 rounded"
+                  className="absolute text-black bottom-1 right-2 hover:bg-red-500 hover:text-white px-1 py-1 rounded-2xl"
                 >
                   Delete
                 </button>

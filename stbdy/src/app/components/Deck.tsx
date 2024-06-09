@@ -18,9 +18,9 @@ export default function Deck({ id, title, description, onDelete }: DeckProps) {
 
         <button
           onClick={handleDelete}
-          className="bg-red-800 text-white px-2 py-1 mt-4 rounded-lg hover:bg-red-300 hover:text-black"
+          className="hover:bg-red-800 hover:text-white px-1 py-1 mt-4 rounded-lg text-black"
         >
-          X
+          x
         </button>
       </div>
     </div>
